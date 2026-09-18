@@ -1,0 +1,23 @@
+name: Defect
+description: Ceva nu se comporta cum trebuie
+body:
+  - type: textarea
+    id: observat
+    attributes:
+      label: Ce se intampla
+      description: Comportamentul observat, cu iesirea reala daca exista.
+    validations:
+      required: true
+  - type: textarea
+    id: asteptat
+    attributes:
+      label: Ce ar trebui sa se intample
+    validations:
+      required: true
+  - type: textarea
+    id: reproducere
+    attributes:
+      label: Cum se reproduce
+      description: Pasii, in ordine. Fara ei defectul nu se poate inchide cu dovada.
+    validations:
+      required: true

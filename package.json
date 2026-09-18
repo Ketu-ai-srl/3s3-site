@@ -1,0 +1,45 @@
+{
+  "name": "3s2-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "porti:probe": "python .claude/scripts/porti/probe/proba-completitudine.py && python .claude/scripts/porti/probe/proba-porti-proces.py && python .claude/scripts/porti/probe/proba-juridic.py && python .claude/scripts/porti/probe/proba-seo.py && python .claude/scripts/porti/probe/proba-regresie.py",
+    "porti:sursa": "python .claude/scripts/porti/poarta-scurgeri.py && python .claude/scripts/porti/poarta-rute.py && python .claude/scripts/porti/poarta-identificatori.py && python .claude/scripts/porti/poarta-legaturi-md.py && python .claude/scripts/porti/poarta-tipografie.py && python .claude/scripts/porti/poarta-limba.py && python .claude/scripts/porti/poarta-afirmatii.py && python .claude/scripts/porti/poarta-evidenta.py && python .claude/scripts/porti/poarta-registru-rute.py && python .claude/scripts/porti/poarta-regresie.py",
+    "porti:build": "python .claude/scripts/porti/poarta-seo.py && python .claude/scripts/porti/poarta-juridic.py",
+    "porti:browser": "node .claude/scripts/porti/browser-toate.mjs",
+    "porti": "pnpm porti:sursa && pnpm build && pnpm porti:build",
+    "test": "vitest run",
+    "verifica": "pnpm lint && pnpm typecheck && pnpm porti:probe && pnpm porti:sursa && pnpm build && pnpm porti:build && pnpm test && pnpm porti:browser",
+    "staging": "bash .claude/scripts/porti/verifica-staging.sh"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.3.4",
+    "gray-matter": "^4.0.3",
+    "next": "15.5.25",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/eslintrc": "^3",
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "axe-core": "^4.13.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.25",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^5.0.0"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

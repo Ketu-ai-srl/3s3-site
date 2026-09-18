@@ -1,0 +1,10 @@
+{
+  "fisiere": 13,
+  "teste": 147,
+  "asertiuni": 430,
+  "sarite_maxim": 0,
+  "masurat_la": "2026-09-07",
+  "masurat_pe": "lotul lot/s2-b al site-ului 3s2 (paginile interioare pe gramatica REF-A, 3 felii: solutii / investitia / juridic), dupa reconciliere: probele noi ale feliilor (tests/felie4-*, felie5-*, felie6-*; felie-juridic si interior-felie4 rescrise pentru jetoanele REF-A). Cifrele sunt copiate din randul MASURAT al portii de regresie (13 fisiere, 147 teste, 430 asertiuni). Podelele anterioare: 12/121/365 (lot s2-b0), 12/110/308 (lot s2-a), 12/96/233 (felia 6 a lui 3s1, mostenita), 12/94/231, 12/93/226, 11/86/209, 8/49/144.",
+  "de_ce": "Pragul e podeaua acceptata ultima data, nu tinta. E asezat pe ce era COMMITAT in momentul scrierii portii, deliberat, nu pe ce era in arborele de lucru: in aceeasi zi un alt val adauga tests/browser/, iar un prag luat dintr-o munca in curs devine fals in clipa in care ea se rearanjeaza, si ar inrosi lotul cuiva care face lucrul corect. Poarta tipareste AVERT R-01..R-03 cat timp masuratoarea e peste prag, cu textul 'ridica pragul': asta e semnalul ca valorile de aici trebuie inlocuite cu cele masurate, dupa ce valul de probe aterizeaza. Ridicarea se face copiind cifrele din randul MASURAT al portii.",
+  "cum_se_coboara": "Stergerea unui test invechit e legitima. Se scade cifra de aici IN ACELASI COMMIT cu stergerea, si poarta o lasa sa treaca, marcand-o 'coborare DECLARATA'. Fara modificarea acestui fisier, scaderea fata de HEAD opreste lotul."
+}

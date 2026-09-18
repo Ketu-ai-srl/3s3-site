@@ -1,0 +1,25 @@
+name: Felie de lucru
+description: O unitate de lucru pe care fabrica o poate duce cap-coada
+body:
+  - type: textarea
+    id: rezultat
+    attributes:
+      label: Ce trebuie sa fie adevarat la final
+      description: Rezultatul, nu sarcina. Se scrie ca o stare verificabila.
+      placeholder: Pagina de solutii pentru notari exista, trece portile si se vede pe staging.
+    validations:
+      required: true
+  - type: textarea
+    id: dovada
+    attributes:
+      label: Cum se dovedeste
+      description: Comanda sau verificarea care arata ca s-a facut. Fara "am verificat vizual".
+    validations:
+      required: true
+  - type: textarea
+    id: limite
+    attributes:
+      label: Ce NU intra in felie
+      description: Granita, ca sa nu creasca sarcina in timpul lucrului.
+    validations:
+      required: false
