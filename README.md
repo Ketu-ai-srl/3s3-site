@@ -1,10 +1,10 @@
-# 3S - Scan Store Solve
+# 3s4 - Scan Store Solve
 
 Site public de vanzare pentru **3S - Scan Store Solve**: arhivare fizica autorizata, digitalizare si cautare AI in documente.
 
-- Mediu de proba: `https://3s2.ke2.in` (inchis: cere autentificare, `noindex`)
+- Mediu de proba: `https://3s4.ke2.in` (public, `noindex`)
 - Productie: nu exista inca
-- Stiva: Next.js 15, Tailwind v4, continut in MDX, pnpm
+- Stiva: Next.js 15, Tailwind v4, React 19, pnpm
 - Livrare: Docker pe Coolify (server `s3.ke2.in`)
 
 ## Comenzi
@@ -13,7 +13,9 @@ Site public de vanzare pentru **3S - Scan Store Solve**: arhivare fizica autoriz
 |---|---|
 | `pnpm dev` | pornire locala |
 | `pnpm verifica` | poarta locala completa: lint, tipuri, tipografie, build, teste |
-| `pnpm porti` | doar poarta de tipografie (liniute lungi interzise) |
+| `pnpm porti` | portile sursei, build si verificarea SEO/juridic |
+
+Directia REF-S foloseste opt imagini originale generate pentru acest site, o demonstratie ilustrativa interactiva si 22 de pagini. Fotografiile nu reprezinta depozitul sau echipa clientului. Detalii: `docs/design/DIRECTIA.md` si `docs/adr/ADR-0006-directie-ref-s.md`.
 
 ## Marcajul de livrare
 

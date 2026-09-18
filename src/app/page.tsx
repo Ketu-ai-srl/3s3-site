@@ -1,206 +1,71 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import BandaIncredere from "@/components/BandaIncredere";
-import Ecran from "@/components/Ecran";
-import { FOTOGRAFII, type CheieFotografie } from "@/content/fotografii";
-import { GRILA, INCREDERE, NOTE, TIGLE } from "@/content/start";
+import Buton from "@/components/Buton";
+import DocumentDemo from "@/components/DocumentDemo";
+import { FOTOGRAFII } from "@/content/fotografii";
+import { HOME, INCREDERE, NOTE, TIGLE } from "@/content/start";
+import { RUTE } from "@/content/rute";
 
-// Pagina de start, pe gramatica REF-A: trei tigle mari pe toata latimea, o grila de sase tigle,
-// banda neagra a faptelor atribuite, notele numerotate, subsolul (din layout).
-//
-// CE A DISPARUT FATA DE DIRECTIA ANTERIOARA, si de ce fiecare lucru in parte:
-//   - EROUL COLORAT. Referinta nu are erou: are tigle. Prima tigla e chiar primul argument, nu
-//     un afis deasupra lui.
-//   - FILELE-PASTILA ale celor trei etape. Comutau panouri cu JavaScript, iar cele trei etape
-//     sunt acum chiar cele trei tigle mari - deschise amandoua, adica toate trei, tot timpul.
-//   - BANDA CTA COLORATA. Referinta n-are banda de brand nicaieri; chemarea la actiune sta in
-//     pastila plina a fiecarei tigle. Un buton primar pe tigla, si tigla e ecranul.
-//   - GRILA CELOR SAPTE DOMENII. A ramas o singura tigla care duce la `/solutii`; cele sapte
-//     pagini sunt in subsol, in coloana lor, deci nu s-a pierdut nicio legatura interna.
-//   - PRETURILE. N-au fost niciodata pe start si nu urca acum.
-//
-// ANCORELE `scan`, `store`, `solve`, `domenii` si `discutie` raman, cu aceleasi nume:
-// `/harta-site` si subsolul fac legaturi catre ele, iar o ancora fara tinta e legatura moarta pe
-// o pagina care exista tocmai ca sa arate drumurile. Acum sunt chiar tigle, deci `/#store` nu
-// mai deschide o fila, ci opreste derularea la ecranul cerut.
-//
-// FOTOGRAFIILE nu poarta text peste ele nicaieri. Textul sta DEASUPRA, in partea de sus a
-// tiglei, iar fotografia umple ce ramane. De aceea pe pagina asta nu exista niciun voal, niciun
-// contrast peste imagine si niciun bloc pe care axe sa-l lase „needs review".
-export const metadata: Metadata = {
-  alternates: { canonical: "/" },
-};
+export const metadata: Metadata = { alternates:{canonical:"/"} };
 
-// Ancora decupajului se citeste din registru, nu se scrie a doua oara in `start.ts`: cifrele
-// sunt masurate pe cadru, si o copie a lor ar diverge la prima remasurare.
-function pozitia(nume: string): string | undefined {
-  return FOTOGRAFII[nume as CheieFotografie]?.pozitie;
+function Semn({index}:{index:number}) {
+  return <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="5" y="3" width="18" height="22" rx="3" stroke="currentColor" strokeWidth="1.5"/><path d={index%2 ? "M9 9h10M9 14h10M9 19h5" : "M10 9h8M10 14h8M10 19h8"} stroke="currentColor" strokeWidth="1.5"/></svg>;
 }
 
 export default function Acasa() {
-  return (
-    <main id="continut">
-      {/* Cele trei tigle mari, despartite prin 12 px de alb - `gap-3`. Fundalul containerului e
-          alb, deci rostul dintre tigle e chiar alb, cum il masoara referinta. */}
-      <div className="flex flex-col gap-3 bg-alb">
-        {TIGLE.map((t, i) => (
-          <Ecran
-            key={t.cheie}
-            id={t.cheie}
-            nivel={i === 0 ? "h1" : "h2"}
-            ton="erou"
-            fundal={t.fundal}
-            titlu={t.titlu}
-            text={t.subtitlu}
-            actiune={t.actiune}
-            secundar={t.secundar}
-            imagine={{ ...t.imagine, pozitie: pozitia(t.imagine.nume) }}
-            // Prima tigla incepe sub bara globala, care e fixa: 48 px pe telefon, 44 de la
-            // 768 px in sus. Fara rezerva, titlul ei ar incepe sub bara.
-            className={i === 0 ? "pt-[48px] md:pt-[44px]" : ""}
-          />
-        ))}
+  const domenii = RUTE.filter(r=>r.cale.startsWith("/solutii/"));
+  return <main id="continut">
+    <section className="s4-hero">
+      {/* Variantele WebP sunt generate local; srcSet pastreaza decorul fara procesare externa. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className="s4-hero-art" src="/art/flux-1536.webp" srcSet="/art/flux-768.webp 768w, /art/flux-1536.webp 1536w" sizes="(max-width:600px) 100vw, 90vw" alt="" aria-hidden="true" width="1536" height="1024" fetchPriority="high"/>
+      <div className="s4-shell">
+        <div className="s4-hero-inner"><div className="s4-hero-copy">
+          <span className="s4-label">{HOME.eticheta}</span>
+          <h1>{HOME.titlu} <span className="s4-secondary">{HOME.continuare}</span></h1>
+          <p className="s4-hero-lead">{HOME.lead}</p>
+          <div className="s4-actions"><Buton href="/contact" sageata>{HOME.actiune}</Buton><Buton href="/cum-functioneaza" fel="text" sageata>{HOME.secundar}</Buton></div>
+        </div></div>
+        <div className="s4-trust">{HOME.repere.map(t=><span key={t}><i aria-hidden="true"/>{t}</span>)}</div>
       </div>
+    </section>
 
-      {/* Grila de doua coloane pe trei randuri, tigle de 580 px la 1440 si 500 px la 390,
-          masurate amandoua pe pagina construita, cu 12 px intre ele. Aceeasi despartire ca sus,
-          acelasi alb intre ele. */}
-      <div className="mt-3 grid grid-cols-1 gap-3 bg-alb md:grid-cols-2">
-        {GRILA.map((t) => {
-          const peNegru = t.fundal === "negru";
-          const fundal =
-            t.fundal === "negru" ? "bg-negru" : t.fundal === "ceata" ? "bg-ceata" : "bg-alb";
-          return (
-            <section
-              key={t.titlu}
-              id={t.cheie}
-              className={
-                // Tiglele CU fotografie au 580 px la 1440, cifra masurata pe referinta, cu
-                // fotografia pe `flex-1 min-h-0` (ia doar ce ramane). Sub 768 tigla NU e legata
-                // la cei 500 px ai referintei: textul romanesc e mai lung si fotografiei ii
-                // ramanea o fasie; tigla creste cu textul si fotografia are 320 px ficsi (vezi
-                // Ecran.tsx si DIRECTIA.md). Podeaua veche (`min-h-`) nu se intoarce: cu ea
-                // cutia fotografiei lua 585 px la 390 si tigla iesea 885-900 px.
-                // Cele fara fotografie pastreaza podeaua, fiindca n-au niciun element elastic
-                // care sa absoarba un text mai lung; masurat, ele dau oricum exact 320 px.
-                // Sunt mai scunde, si nu din economie: masurat pe captura, o tigla de 580 px cu
-                // doua randuri de text si o pastila lasa 340 px de suprafata goala sub ele,
-                // adica un gol care se citeste ca lipsa, nu ca ritm. Cele doua tigle fara cadru
-                // stau pe acelasi rand, deci randul ramane drept.
-                "flex flex-col overflow-hidden " +
-                (t.imagine ? "md:h-[580px] " : "min-h-[320px] md:h-[380px] ") +
-                fundal
-              }
-            >
-              <div className="shrink-0 px-4 pt-14 text-center md:px-10">
-                <h3
-                  className={
-                    "mx-auto max-w-[18ch] text-titlu-3 " +
-                    (peNegru ? "text-ceata" : "text-cerneala")
-                  }
-                >
-                  {t.titlu}
-                </h3>
-                <p
-                  className={
-                    "mx-auto mt-3 max-w-[34ch] text-subtitlu " +
-                    (peNegru ? "text-ceata" : "text-cerneala")
-                  }
-                >
-                  {t.subtitlu}
-                </p>
-                {/* Nota de 14 px: `cerneala-3` pe deschis (5,07:1 pe alb, 4,66:1 pe ceata).
-                    `cerneala-2` ar da 3,62 si 3,33, deci sub prag la marimea asta. */}
-                <p
-                  className={
-                    "mx-auto mt-3 max-w-[38ch] text-nota " +
-                    (peNegru ? "text-ceata" : "text-cerneala-3")
-                  }
-                >
-                  {t.nota}
-                </p>
-                <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3">
-                  <Link
-                    href={t.actiune.href}
-                    className={
-                      "inline-flex items-center justify-center rounded-pastila px-[15px] py-[8px] text-nota leading-[20px] font-semibold no-underline transition-colors duration-200 " +
-                      (peNegru
-                        ? "bg-alb text-cerneala hover:bg-ceata"
-                        : "bg-albastru text-alb hover:bg-albastru-2")
-                    }
-                  >
-                    {t.actiune.text}
-                  </Link>
-                  {t.secundar ? (
-                    <Link
-                      href={t.secundar.href}
-                      className={
-                        "inline-flex items-center justify-center rounded-pastila px-[15px] py-[8px] text-nota leading-[20px] font-semibold no-underline transition-colors duration-200 " +
-                        (peNegru
-                          ? "contur-albastru-clar text-albastru-clar hover:bg-[#141414]"
-                          : "contur-albastru text-albastru-2 hover:bg-alb")
-                      }
-                    >
-                      {t.secundar.text}
-                    </Link>
-                  ) : null}
-                </div>
-              </div>
-
-              {t.imagine ? (
-                <div className="mt-10 h-[320px] w-full md:h-auto md:min-h-0 md:flex-1">
-                  <picture>
-                    <source
-                      media="(max-width: 767px)"
-                      srcSet={"/img/" + t.imagine.nume + "-960.webp"}
-                    />
-                    <img
-                      src={"/img/" + t.imagine.nume + "-1920.webp"}
-                      alt={t.imagine.alt}
-                      className="h-full w-full object-cover"
-                      style={{ objectPosition: pozitia(t.imagine.nume) ?? "center" }}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </picture>
-                </div>
-              ) : null}
-            </section>
-          );
-        })}
+    <section className="s4-section bg-ceata">
+      <div className="s4-shell">
+        <span className="s4-label">{HOME.serviciiEticheta}</span>
+        <h2 className="s4-section-title">{HOME.serviciiTitlu} <span className="s4-secondary">{HOME.serviciiText}</span></h2>
+        <div className="s4-products">{TIGLE.slice(0,2).map((t,i)=>{
+          const f=FOTOGRAFII[t.imagine.nume as keyof typeof FOTOGRAFII];
+          return <article id={t.cheie} className="s4-product" key={t.cheie}>
+            <div className="s4-product-copy"><span className="s4-label">{i===0 ? "01 / Scan" : "02 / Store"}</span><h3>{t.titlu}</h3><p>{t.subtitlu}</p><Link href={t.secundar.href} className="s4-text-link">{t.secundar.text}<span aria-hidden="true">→</span></Link></div>
+            <picture><source media="(max-width:767px)" srcSet={"/img/"+f.nume+"-960.webp"}/><img src={"/img/"+f.nume+"-1920.webp"} alt={f.alt} className="s4-product-photo" loading="lazy" width="1920" height="1280" style={{objectPosition:f.pozitie}}/></picture>
+          </article>;
+        })}</div>
       </div>
+    </section>
 
-      <div className="mt-3">
-        <BandaIncredere
-          eticheta={INCREDERE.eticheta}
-          titlu={
-            <>
-              {INCREDERE.titlu}
-              <a href={"#" + NOTE[0].id} className="text-albastru-clar no-underline">
-                <sup className="text-mic">1</sup>
-                <span className="sr-only"> vezi nota 1</span>
-              </a>
-            </>
-          }
-          elemente={INCREDERE.elemente}
-        />
-      </div>
+    <section id="solve" className="s4-section s4-dark">
+      <div className="s4-shell s4-solve-grid"><div>
+        <span className="s4-label">03 / Solve</span>
+        <h2 className="s4-section-title mb-6">{TIGLE[2].titlu}</h2>
+        <p className="s4-secondary text-lead">{TIGLE[2].subtitlu}</p>
+        <p className="s4-secondary mt-5">{HOME.solveText}</p>
+        <div className="mt-8"><Buton href="/cum-functioneaza" fel="alb" sageata>{HOME.solveActiune}</Buton></div>
+      </div><DocumentDemo/></div>
+    </section>
 
-      {/* Notele numerotate, 12 px, pe alb: locul in care pagina isi scrie limitele. Sunt o
-          lista ordonata, nu doua paragrafe, fiindca numarul lor e chiar legatura cu exponentul
-          de mai sus. */}
-      <section className="bg-alb">
-        <div className="mx-auto w-full max-w-vitrina px-4 py-12 md:px-8">
-          <ol className="m-0 flex list-none flex-col gap-2 p-0">
-            {NOTE.map((n, i) => (
-              <li key={n.id} id={n.id} className="flex gap-2 text-mic text-cerneala-3">
-                <span aria-hidden>{i + 1}.</span>
-                <span className="max-w-[92ch]">{n.text}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-    </main>
-  );
+    <section id="domenii" className="s4-section"><div className="s4-shell">
+      <span className="s4-label">{HOME.domeniiEticheta}</span>
+      <h2 className="s4-section-title">{HOME.domeniiTitlu} <span className="s4-secondary">{HOME.domeniiText}</span></h2>
+      <div className="s4-domains">{domenii.map((d,i)=><Link key={d.cale} href={d.cale} className="s4-domain"><Semn index={i}/><span>{d.scurt}<b aria-hidden="true">↗</b></span></Link>)}<Link href="/solutii" className="s4-domain bg-ceata"><Semn index={7}/><span>{HOME.toateDomeniile}<b aria-hidden="true">↗</b></span></Link></div>
+    </div></section>
+
+    <section className="s4-section bg-ceata"><div className="s4-shell s4-proof">
+      <picture><source media="(max-width:767px)" srcSet="/img/dosare-960.webp"/><img src="/img/dosare-1920.webp" width="1920" height="1280" loading="lazy" alt={FOTOGRAFII.dosare.alt}/></picture>
+      <div><span className="s4-label">{INCREDERE.eticheta}</span><h2 className="s4-section-title mb-8">{INCREDERE.titlu}</h2><div className="s4-proof-list">{INCREDERE.elemente.slice(0,3).map(e=><article key={e.titlu}><h3>{e.titlu}</h3><p>{e.text}</p></article>)}</div><Link href="/despre" className="s4-text-link">{HOME.despreActiune}<span aria-hidden="true">→</span></Link></div>
+    </div></section>
+
+    <section id="discutie" className="s4-section s4-final"><div className="s4-shell s4-final-inner"><div><span className="s4-label">{HOME.finalEticheta}</span><h2 className="s4-section-title mb-5">{HOME.finalTitlu}</h2><p className="max-w-[54ch] text-corp text-cerneala-3">{HOME.finalText}</p></div><div className="shrink-0"><Buton href="/contact" sageata>{HOME.actiune}</Buton></div></div></section>
+    <section className="s4-shell py-10"><ol className="m-0 list-none p-0 space-y-3">{NOTE.map((n,i)=><li key={n.id} id={n.id} className="flex gap-3 text-mic text-cerneala-3"><span>{i+1}.</span><span>{n.text}</span></li>)}</ol></section>
+  </main>;
 }

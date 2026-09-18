@@ -112,7 +112,7 @@ TIPAR_SUBSTITUENT = re.compile(r'(TODO|TBD|XXX+|\?\?\?|N/?A\b|de\s+completat|nec
 
 # Gazdele proprii. O resursa incarcata de aici nu e "tert". Lista e scurta si
 # motivata: doar mediile noastre. O gazda adaugata aici trebuie sa vina cu motiv.
-GAZDE_PROPRII = {'3s2.ke2.in', '3s.ro', 'localhost', '127.0.0.1'}
+GAZDE_PROPRII = {'3s4.ke2.in', '3s.ro', 'localhost', '127.0.0.1'}
 
 # Furnizori de urmarire cunoscuti, cautati si in sursa, nu doar in HTML: un
 # `import` de SDK nu produce neaparat un `<script src>` absolut in build.

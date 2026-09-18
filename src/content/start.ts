@@ -1,34 +1,3 @@
-// Textele NOI ale paginii de start, cerute de gramatica REF-A: cele trei tigle mari, grila de
-// sase tigle, banda neagra a faptelor atribuite si notele de subsol.
-//
-// CE STA AICI SI CE NU. Aici stau doar textele pe care structura noua le cere si care nu
-// existau in continutul de azi. Tot ce exista deja se CITESTE de unde e: numele paginilor din
-// `rute.ts`, identitatea firmei din `entitate.ts`, textul domeniilor din `segmente.ts`. Nu se
-// copiaza aici, fiindca o copie si originalul diverg la prima editare, iar textul lor se
-// rescrie in paralel, in alta felie, sub aceleasi chei.
-//
-// VOCEA, dupa REF-A: o afirmatie de doua-patru cuvinte cu PUNCT, apoi o propozitie de
-// explicatie. Litera obisnuita, fara majuscule de afis, fara ton de reclama, fara liniute
-// lungi. Titlul spune ce se intampla, nu cat de buni suntem.
-//
-// ADEVARUL. Nicio cifra noua si nicio certificare. Faptele din banda neagra sunt afirmatiile
-// deja inregistrate in `src/content/afirmatii/pagina-principala.json`, scrise atribuit: ce face
-// ADRIA, firma-mama, si ce se intampla la preluare. Ce nu detinem se scrie pe pagina, in notele
-// numerotate de la final, nu se ocoleste.
-//
-// FOTOGRAFIILE. Fiecare cheie a registrului apare EXACT o data pe pagina: `maini`, `rafturi` si
-// `sertare` in cele trei tigle mari, `legatura`, `cutii`, `dulapuri` si `dosare` in grila. Nu e
-// simetrie de dragul simetriei: pe o pagina in care fotografia e mare cat tigla, acelasi cadru
-// aparut de doua ori se citeste ca greseala de montaj.
-//
-// TEXTUL ALTERNATIV e scris aici, nu citit din `src/content/fotografii.ts`, fiindca pagina de
-// start isi tine textele in fisierul asta. Cheile sunt aceleasi, deci cand se schimba setul de
-// fotografii se rescriu AMBELE locuri, altfel alt-ul descrie o fotografie care nu mai exista.
-// De asta se ocupa `tests/fotografii.test.ts`: cere ca fiecare `alt` de aici sa fie cuvant cu
-// cuvant cel din registru.
-//
-// ANCORA DECUPAJULUI NU SE SCRIE AICI. Pagina o citeste din `FOTOGRAFII`, cu cheia de mai jos.
-// O a doua copie a unei cifre masurate ar diverge la prima remasurare, si nimic nu se uita la ea.
 
 export type Legatura = { href: string; text: string };
 
@@ -38,7 +7,7 @@ export type ImagineTigla = {
 };
 
 export type TiglaMare = {
-  /** ancora sectiunii; `rute.ts` o inscrie in `SECTIUNI_ACASA` si subsolul trimite la ea */
+  
   cheie: string;
   titlu: string;
   subtitlu: string;
@@ -52,53 +21,49 @@ export type TiglaMica = {
   cheie?: string;
   titlu: string;
   subtitlu: string;
-  /** randul de 14 px de sub subtitlu: precizarea care tine afirmatia in adevar */
+  
   nota: string;
   actiune: Legatura;
   secundar?: Legatura;
   imagine?: ImagineTigla;
   fundal: "alb" | "ceata" | "negru";
 };
-
-// Butonul primar e acelasi pe fiecare tigla, si asta e chiar gramatica referintei: fiecare tigla
-// e un ecran, fiecare ecran are UN buton primar, si el duce mereu in acelasi loc. Ce se schimba
-// de la o tigla la alta e drumul al doilea - pastila cu contur, care duce la fisa.
 const DISCUTIE: Legatura = { href: "/contact", text: "Discuție de 30 de minute" };
 
 export const TIGLE: TiglaMare[] = [
   {
     cheie: "scan",
-    titlu: "Se digitalizează ce se caută.",
-    subtitlu: "Nu tot fondul. Se scanează documentele cerute des, iar originalul rămâne pe raft.",
+    titlu: "Documentele devin accesibile.",
+    subtitlu: "Digitalizați documentele de care aveți nevoie des. Păstrați originalele și lucrați cu o copie pe care o puteți căuta.",
     actiune: DISCUTIE,
     secundar: { href: "/cum-functioneaza", text: "Cum funcționează" },
     imagine: {
       nume: "maini",
-      alt: "Mână care scoate un dosar dintr-un suport de documente din carton, cu file de hârtie ieșind dintre despărțitoare, fotografie ilustrativă",
+      alt: "Mâini care așază documente de hârtie lângă un scaner, fotografie ilustrativă",
     },
     fundal: "alb",
   },
   {
     cheie: "store",
-    titlu: "Hârtia stă la depozit.",
+    titlu: "Un loc pentru fiecare document.",
     subtitlu: "Fiecare cutie are o cotă. Depozitul este la Golești, județul Argeș, și poate fi vizitat.",
     actiune: DISCUTIE,
     secundar: { href: "/arhivare-fizica", text: "Arhivare fizică" },
     imagine: {
       nume: "rafturi",
-      alt: "Rafturi metalice înalte de depozit, pe mai multe niveluri, încărcate cu cutii de carton și cu paleți înfoliați, fotografie ilustrativă",
+      alt: "Rafturi de arhivă cu rânduri de cutii de carton într-un culoar luminos, fotografie ilustrativă",
     },
     fundal: "ceata",
   },
   {
     cheie: "solve",
-    titlu: "Răspunsul vine cu pagina.",
+    titlu: "De la întrebare la document.",
     subtitlu: "Întrebați în română. Fraza se deschide la documentul și pagina din care a fost scoasă.",
     actiune: DISCUTIE,
     secundar: { href: "/instrumente/termene-de-pastrare", text: "Termene de păstrare" },
     imagine: {
       nume: "sertare",
-      alt: "Fronturile mai multor sertare plate suprapuse, cu mânere de sârmă, văzute în prim-plan apropiat și oblic; benzile lor merg de la negru și maro închis la tonuri de nisip, alb, gri și un galben, fotografie ilustrativă",
+      alt: "Sertar de arhivă deschis cu documente și mânere metalice, fotografie ilustrativă",
     },
     fundal: "negru",
   },
@@ -107,46 +72,46 @@ export const TIGLE: TiglaMare[] = [
 export const GRILA: TiglaMica[] = [
   {
     cheie: "domenii",
-    titlu: "Aceeași arhivă, alte întrebări.",
+    titlu: "Servicii adaptate documentelor dumneavoastră.",
     subtitlu: "Un notar caută altceva decât o primărie.",
     nota: "Fiecare domeniu are pagina lui, cu termenele și actele care i se aplică.",
     actiune: { href: "/solutii", text: "Toate domeniile" },
     imagine: {
       nume: "legatura",
-      alt: "Bibliorafturi negre așezate în evantai pe un birou alb, cu semne colorate între file, alături de o mapă cu fermoar, fotografie ilustrativă",
+      alt: "Dosare și volume legate în material textil, așezate vertical pe un birou, fotografie ilustrativă",
     },
     fundal: "alb",
   },
   {
-    titlu: "Trei pași, în ordine.",
+    titlu: "Un parcurs clar pentru documente.",
     subtitlu: "Preluarea, depozitarea și căutarea sunt lucruri diferite.",
     nota: "Se pot lua separat. Preluarea se face cu proces-verbal și cu măsurarea metrilor liniari.",
     actiune: { href: "/cum-functioneaza", text: "Vedeți mecanismul" },
     imagine: {
       nume: "cutii",
-      alt: "Trei cutii de arhivă din carton kraft, așezate pe un birou alb, cu dosare suspendate prinse în ele; o mână așază unul dintre dosare, fotografie ilustrativă",
+      alt: "Cutii închise de carton kraft pe o masă deschisă la culoare, fotografie ilustrativă",
     },
     fundal: "ceata",
   },
   {
-    titlu: "Intrarea se consemnează.",
+    titlu: "Accesul lasă o urmă.",
     subtitlu: "Acces pe persoană, cu urmă scrisă a fiecărei scoateri.",
     nota: "Pagina de securitate scrie și ce nu deținem, nu doar ce facem.",
     actiune: { href: "/securitate", text: "Ce protejăm" },
     imagine: {
       nume: "dulapuri",
-      alt: "Ușa albă a unui dulap de birou, cu cheia lăsată în broască, prim-plan în lumină de zi, fotografie ilustrativă",
+      alt: "Dulapuri metalice deschise la culoare, cu ușile închise, fotografie ilustrativă",
     },
     fundal: "negru",
   },
   {
-    titlu: "Plătiți volumul real.",
+    titlu: "Costuri pornind de la volumul real.",
     subtitlu: "Costul pornește de la metrii liniari măsurați la preluare.",
     nota: "Factorii sunt scriși unul câte unul, cu ce îi mărește și ce îi micșorează.",
     actiune: { href: "/investitia", text: "Cum se calculează" },
     imagine: {
       nume: "dosare",
-      alt: "Teancuri de dosare vechi de carton, cu filele ieșind dintre coperți, în lumină caldă de prim-plan, fotografie ilustrativă",
+      alt: "Dosare de carton crem și violet așezate în teanc pe un birou, fotografie ilustrativă",
     },
     fundal: "alb",
   },
@@ -169,7 +134,7 @@ export const GRILA: TiglaMica[] = [
 
 export const INCREDERE = {
   eticheta: "Ce se poate verifica",
-  titlu: "Faptele stau în acte.",
+  titlu: "Încrederea începe cu lucruri verificabile.",
   elemente: [
     {
       titlu: "Depozit care se poate vedea",
@@ -189,11 +154,6 @@ export const INCREDERE = {
     },
   ],
 };
-
-// Notele numerotate de la baza paginii, la 12 px, exact ca in referinta. Sunt locul in care
-// pagina isi spune limitele: cine sustine faptele de mai sus si ce nu detinem. Prima nota e
-// legata de titlul benzii negre printr-un exponent; a doua sta pe cont propriu, fiindca e
-// despre tot ce scrie pe pagina.
 export const NOTE = [
   {
     id: "nota-1",
@@ -204,3 +164,36 @@ export const NOTE = [
     text: "Nu deținem certificare ISO 27001. Ce nu deținem este scris pe pagina de securitate, nu ocolit.",
   },
 ];
+
+export const HOME = {
+  eticheta: "Scan · Store · Solve",
+  titlu: "Documentele în ordine.",
+  continuare: "Răspunsurile la îndemână.",
+  lead: "Arhivare fizică, digitalizare și căutare în documente. De la cutia de pe raft la pagina de care aveți nevoie.",
+  actiune: "Discuție de 30 de minute",
+  secundar: "Descoperiți cum funcționează",
+  repere: ["Arhivare fizică prin ADRIA", "Căutare în limba română", "Răspunsuri cu sursa la vedere"],
+  serviciiEticheta: "O arhivă, trei servicii",
+  serviciiTitlu: "Alegeți de unde începeți.",
+  serviciiText: "Documentele fizice și cele digitale pot lucra împreună.",
+  solveText: "Verificați informația în documentul original. Sursa rămâne lângă răspuns, ca să puteți vedea exact de unde provine.",
+  solveActiune: "Vedeți cum se caută",
+  domeniiEticheta: "Pentru munca dumneavoastră",
+  domeniiTitlu: "Documente diferite. Aceeași nevoie de claritate.",
+  domeniiText: "Găsiți serviciile potrivite domeniului în care lucrați.",
+  toateDomeniile: "Toate domeniile",
+  despreActiune: "Cunoașteți echipa din spate",
+  finalEticheta: "Următorul pas",
+  finalTitlu: "Să pornim de la arhiva dumneavoastră.",
+  finalText: "Discutăm despre documentele pe care le aveți, ce căutați frecvent și de unde are sens să începeți. Rezervăm o jumătate de oră pentru întrebările dumneavoastră.",
+};
+export const DEMO = {
+  titlu: "Întrebați arhiva",
+  nota: "Exemplu ilustrativ",
+  alegere: "Alegeți un exemplu de document",
+  exemple: [
+    {nume:"Contract",intrebare:"Când expiră contractul de închiriere?",raspuns:"În acest exemplu, contractul se încheie la 31 decembrie. Data este menționată în clauza privind durata închirierii.",sursa:"Contract de închiriere · exemplu",pagina:"Pagina 2 · Durata contractului"},
+    {nume:"Factură",intrebare:"Care este termenul de plată?",raspuns:"Factura din acest exemplu prevede plata în 30 de zile de la emitere. Condiția apare în secțiunea de plată a documentului.",sursa:"Factură · exemplu",pagina:"Pagina 1 · Condiții de plată"},
+    {nume:"Proces-verbal",intrebare:"Ce documente au fost predate?",raspuns:"Procesul-verbal din acest exemplu enumeră dosarele predate și persoanele care au semnat. Lista poate fi verificată în anexa documentului.",sursa:"Proces-verbal de predare · exemplu",pagina:"Pagina 3 · Lista documentelor"},
+  ],
+};

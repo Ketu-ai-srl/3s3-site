@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Poarta de scurgeri: ce nu are voie sa iasa dintr-un depozit PUBLIC.
 
-De ce exista: `Ketu-ai-srl/3s2-site` e public. Regula "nu comite analiza concurentei,
+De ce exista: `Ketu-ai-srl/3s4-site` e public. Regula "nu comite analiza concurentei,
 PII sau preturi de cost" era scrisa in proza, in doua fisiere de reguli, si NU a aparat
 nimic: pe 5 sep 2026 numele unui concurent ajunsese in doua comentarii de cod si intr-un
 `.pyc` din cache. L-am prins citind, cu ochii. A doua oara nu-l mai prind.
@@ -141,7 +141,7 @@ def controale():
         return 'martorul pozitiv: cheia privata nu a fost prinsa'
     negativ = '\n'.join([
         'Termenele vin din Legea 16/1996 si din Legea 365/2002, republicata.',
-        'Scrieti la contact@3s2.ke2.in sau sunati la numarul din pagina de contact.',
+        'Scrieti la contact@3s4.ke2.in sau sunati la numarul din pagina de contact.',
         'Depozitul are 4000 de metri liniari si un plan de arhivare pe 2026.',
         'telefon fixtura: ' + '+40 0' + '00 000 000',
     ])

@@ -3,45 +3,9 @@ import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { FOTOGRAFII } from '../src/content/fotografii'
 
-/**
- * Probele feliei 6 (val S1-d): setul de fotografii al ACESTUI site.
- *
- * CE CLASA DE DEFECT INCHID. Site-ul a pornit ca o copie a primului si a mostenit cele sapte
- * cadre ale lui, identice la octet. Regula noua a fabricii e ca fiecare site are cadrele lui,
- * cu cheile NESCHIMBATE - cheia e contractul cu paginile, fisierul e al site-ului. Modurile de
- * a esua tacut, pe care nu le prinde nicio poarta de azi:
- *   1. o cheie ramane in registru fara fisier pe disc (pagina cere un 404),
- *   2. un fisier ramane pe disc fara cheie in registru (cadrul vechi supravietuieste in repo),
- *   3. marimile nu mai sunt cele cerute - `-1920` cu alta latime, `-960` peisaj in loc de
- *      portret, adica exact inmuierea pe telefon pentru care exista a doua marime,
- *   4. `LICENTA.md` ramane fara rand pentru o cheie, sau cu un rand care nu duce la nicio
- *      fotografie Pexels, sau cu aceeasi adresa la doua chei (copiere de rand),
- *   5. `src/content/start.ts`, care isi tine propriile alt-uri pentru aceleasi chei, ramane cu
- *      descrierea cadrului VECHI - un alt rescris intr-un singur loc,
- *   6. acelasi start.ts tine si `pozitie` pentru trei dintre chei, si ea poate diverge la fel
- *      de tacut: pana la runda a treia chiar diverguse (file-le: dosare 55%, cutii 45%;
- *      registrul: 50% pentru amandoua), fiindca cifrele lor fusesera alese contra cadrelor
- *      dinaintea schimbarii setului.
- * Plus regula de adevar a textului alternativ: descrie ce se vede, se termina cu mentiunea
- * ilustrativa si NU afirma ca ar fi depozitul nostru.
- *
- * CE NU INCHIDE, MASURAT. Punctul 4 verifica FORMA randului din `LICENTA.md`, nu provenienta:
- * un ID de fotografie inlocuit cu unul inventat trece verde. Masurat pe 2026-09-06: cu trei
- * ID-uri fabricate in `LICENTA.md` (7303393 -> 1000000, 6169026 -> 1000001, 33686677 ->
- * 1000002) proba a ramas verde pe toate cazurile. Ca sa cada mutantul asta ar trebui
- * re-descarcate originalele si comparate cu fisierele, adica retea intr-o proba de unitate;
- * provenienta se masoara o data, la schimbarea setului, in afara probei (semnatura 32x32 gri a
- * fiecarui `-1920` fata de toate sursele: cea mai apropiata trebuie sa fie sursa declarata).
- * Verificarea de aici prinde randul lipsa, randul fara adresa si adresa copiata la doua chei.
- *
- * CE NU FACE. Nu masoara unicitatea fata de alt site: dovada aceea e a fabricii (sume sha256
- * comparate intre depozite, comanda in `public/img/LICENTA.md`), iar o proba care ar purta
- * sumele altui site le-ar transforma in fixturi care se invechesc la prima recompresie de
- * acolo.
- *
- * Fisier NOU, cum cere regula valului: `praguri-regresie.json` e partajat, iar din
- * `tests/directia.test.ts` s-a corectat doar o NOTA devenita falsa, nicio verificare.
- */
+/** Set original generat pentru 3s4. Verificam fisierele, dimensiunile,
+ * provenienta declarata si descrierile ilustrative. Identitatea fata de alte site-uri
+ * se verifica separat prin poarta fabricii. Vezi ADR-0006 pentru migrarea provenientei. */
 
 const RADACINA = join(__dirname, '..')
 const DOSAR_IMG = join(RADACINA, 'public', 'img')
@@ -175,27 +139,20 @@ describe('setul de fotografii al site-ului', () => {
     }
   })
 
-  it('LICENTA.md numeste fiecare cheie cu o adresa Pexels, si nu de doua ori aceeasi', () => {
-    // LIMITA, masurata: verificarea e pe FORMA randului, nu pe provenienta. Un ID inlocuit cu
-    // unul inventat trece verde - masurat cu trei ID-uri fabricate, proba a ramas verde. Ce
-    // prinde: randul lipsa, randul fara adresa Pexels si acelasi ID pus la doua chei, care e
-    // modul real in care se strica tabelul cand se schimba un singur cadru prin copiere de
-    // rand. Provenienta se masoara in afara probei, la schimbarea setului.
+  it('provenienta generata are cate un identificator unic pentru fiecare cheie', () => {
     const licenta = readFileSync(join(DOSAR_IMG, 'LICENTA.md'), 'utf8')
-    const randuri = licenta.split('\n')
-    const idPerCheie = new Map<string, string>()
+    const registru = JSON.parse(readFileSync(join(DOSAR_IMG, 'provenienta.json'), 'utf8'))
+    expect(Object.keys(registru).sort()).toEqual([...CHEI].sort())
+    const iduri: string[] = []
     for (const cheie of CHEI) {
-      const rand = randuri.find((l) => l.includes('| ' + cheie + '-*.webp'))
-      expect(rand, 'LICENTA.md nu are rand pentru ' + cheie).toBeTruthy()
-      const potrivire = (rand as string).match(/https:\/\/www\.pexels\.com\/photo\/(\d+)\//)
-      expect(potrivire, 'randul lui ' + cheie + ' nu duce la o fotografie Pexels').toBeTruthy()
-      idPerCheie.set(cheie, (potrivire as RegExpMatchArray)[1])
+      expect(registru[cheie].type).toBe('generated')
+      expect(registru[cheie].asset).toMatch(/^exec-[a-f0-9-]+\.png$/)
+      expect(registru[cheie].created).toMatch(/^2026-09-18$/)
+      expect(licenta).toContain(cheie)
+      iduri.push(registru[cheie].asset)
     }
-    const idUri = [...idPerCheie.values()]
-    expect(new Set(idUri).size, 'doua chei trimit la aceeasi fotografie: ' + idUri.join(', ')).toBe(
-      idUri.length,
-    )
-    expect(licenta, 'LICENTA.md nu mai numeste licenta Pexels').toContain('pexels.com/license/')
+    expect(new Set(iduri).size).toBe(CHEI.length)
+    expect(licenta.toLowerCase()).toContain('ilustrativ')
   })
 
   it('alt-ul SI pozitia din pagina de start sunt cele din registru', () => {
