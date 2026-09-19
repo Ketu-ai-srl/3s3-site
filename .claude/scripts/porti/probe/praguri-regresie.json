@@ -1,10 +1,10 @@
 {
   "fisiere": 14,
-  "teste": 125,
-  "asertiuni": 286,
+  "teste": 67,
+  "asertiuni": 190,
   "sarite_maxim": 0,
-  "masurat_la": "2026-09-18",
-  "masurat_pe": "3s4 lot/s4: REF-S; cifre copiate din poarta de regresie, 14 fisiere / 125 cazuri / 286 asertiuni / zero sarite.",
-  "de_ce": "Coborare DECLARATA: specificatiile REF-A inlocuite de noua directie ceruta de utilizator. 38 teste de gramatica veche sunt inlocuite de 19 teste semantice, de contrast si randare reala; 3 teste browser noi verifica demonstratia, meniul la 5 latimi si miscarea redusa. Verificarea provenientei Pexels este inlocuita cu registrul generarii originale. Portile generice raman intacte. Motive si limite: docs/adr/ADR-0006-directie-ref-s.md.",
-  "cum_se_coboara": "Stergerea unui test invechit e legitima. Se scade cifra de aici IN ACELASI COMMIT cu stergerea, si poarta o lasa sa treaca, marcand-o 'coborare DECLARATA'. Fara modificarea acestui fisier, scaderea fata de HEAD opreste lotul."
+  "masurat_la": "2026-09-19",
+  "masurat_pe": "3s3 lot/s3-rebuild; migratie explicita la alternativa noua, cifre din contorul nemodificat.",
+  "de_ce": "Coborare DECLARATA a cazurilor si asertiunilor: cele sase suite pentru componentele vechi sunt inlocuite de sase suite semantice pentru calcul, sursa documentului, contact, structura, continut si active. Meniul si interactiunile sunt testate in browser. Cele cinci porti generice si proba marcajului raman. Nicio proba sarita; detectorii nu sunt modificati. Motiv: docs/adr/ADR-0008-alternativa-3s3.md.",
+  "cum_se_coboara": "In acelasi commit cu inlocuirea probelor, motivat explicit."
 }

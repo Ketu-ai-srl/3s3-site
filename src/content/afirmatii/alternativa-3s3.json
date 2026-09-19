@@ -1,0 +1,299 @@
+[
+  {
+    "id": "s3-ruta-accesibilitate",
+    "text": "Pagina /accesibilitate prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/accesibilitate/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-arhivare-fizica",
+    "text": "Pagina /arhivare-fizica prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/arhivare-fizica/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-comparatie",
+    "text": "Pagina /comparatie prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/comparatie/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-confidentialitate",
+    "text": "Pagina /confidentialitate prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/confidentialitate/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-contact",
+    "text": "Pagina /contact prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/contact/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-cookies",
+    "text": "Pagina /cookies prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/cookies/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-cum-functioneaza",
+    "text": "Pagina /cum-functioneaza prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/cum-functioneaza/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-despre",
+    "text": "Pagina /despre prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/despre/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-harta-site",
+    "text": "Pagina /harta-site prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/harta-site/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-instrumente-termene-de-pastrare",
+    "text": "Pagina /instrumente/termene-de-pastrare prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/instrumente/termene-de-pastrare/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-investitia",
+    "text": "Pagina /investitia prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/investitia/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-acasa",
+    "text": "Pagina / prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-securitate",
+    "text": "Pagina /securitate prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/securitate/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-solutii-avocatura",
+    "text": "Pagina /solutii/avocatura prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/solutii/avocatura/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-solutii-constructii",
+    "text": "Pagina /solutii/constructii prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/solutii/constructii/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-solutii-contabilitate",
+    "text": "Pagina /solutii/contabilitate prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/solutii/contabilitate/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-solutii-imobiliare",
+    "text": "Pagina /solutii/imobiliare prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/solutii/imobiliare/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-solutii-logistica",
+    "text": "Pagina /solutii/logistica prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/solutii/logistica/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-solutii-notari",
+    "text": "Pagina /solutii/notari prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/solutii/notari/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-solutii",
+    "text": "Pagina /solutii prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/solutii/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-solutii-primarii",
+    "text": "Pagina /solutii/primarii prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/solutii/primarii/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ruta-termeni",
+    "text": "Pagina /termeni prezinta continutul si interactiunile alternativei 3S; exemplele de documente sunt fictive.",
+    "unde": "src/app/termeni/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Sursa paginii, inspectie editoriala si probele locale. Descriere de implementare, nu promisiune a unui serviciu contractat.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-adria-contact",
+    "text": "ADRIA SERVICII ARHIVARE SRL primeste corespondenta la office@adriaarhivare.ro; punctul de lucru publicat este Str. Garii 29 bis, Hala C1, Golesti, Arges.",
+    "unde": "src/content/catalog.ts, src/app/contact/page.tsx",
+    "stare": "confirmat",
+    "sursa": "https://adriaarhivare.ro/contact.html",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-adria-identitate",
+    "text": "Datele CUI 30901492 si J03/1580/2012 identifica ADRIA, nu o noua societate 3S.",
+    "unde": "src/app/despre/page.tsx, src/app/termeni/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Contextul proiectului si identificarea operatorului ADRIA; verificare separata de identitatea juridica a unei viitoare entitati 3S.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-servicii-adria",
+    "text": "Arhivarea fizica si digitalizarea sunt prezentate prin ADRIA.",
+    "unde": "src/app/page.tsx, src/app/arhivare-fizica/page.tsx",
+    "stare": "confirmat",
+    "sursa": "https://adriaarhivare.ro/",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-regula-contabila",
+    "text": "Termenul contabil este de 5 ani de la 1 iulie a anului urmator incheierii exercitiului financiar, inclusiv pentru statele de salarii.",
+    "unde": "src/content/retention.ts, src/content/catalog.ts",
+    "stare": "confirmat",
+    "sursa": "https://legislatie.just.ro/public/DetaliiDocument/263884 - art. I pct. 2, noul art. 25",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-selectie",
+    "text": "Nomenclatorul si procedura de selectionare trebuie verificate; expirarea termenului nu este o autorizatie automata de distrugere.",
+    "unde": "src/content/retention.ts, src/app/instrumente/termene-de-pastrare/page.tsx",
+    "stare": "confirmat",
+    "sursa": "https://legislatie.just.ro/Public/DetaliiDocument/7937 - art. 8 si 11",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-demo-local",
+    "text": "Demonstratia foloseste date fictive, raspunsuri predefinite si documente PDF locale, fara model AI sau incarcare de documente.",
+    "unde": "src/content/demo.ts, src/components/SearchDemo.tsx",
+    "stare": "confirmat",
+    "sursa": "Implementarea locala si probele de browser alternativa.spec.ts",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-contact-mailto",
+    "text": "Instrumentul de contact pregateste un e-mail; nu trimite mesaje si nu confirma livrarea.",
+    "unde": "src/components/ContactComposer.tsx, src/app/confidentialitate/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Implementare mailto si clipboard, testele contact.test.ts si alternativa.spec.ts",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-ai-inferenta",
+    "text": "O implementare de cautare AI poate transmite intrebarea si fragmente de document pentru inferenta. Furnizorii si conditiile se clarifica inainte de transferul documentelor reale.",
+    "unde": "src/content/catalog.ts, src/app/securitate/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Descriere generala a mecanismului de cautare cu generare; nicio garantie privind configuratia unui serviciu 3S.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-fotografii",
+    "text": "Fotografiile sunt ilustratii generate cu AI, nu dovezi ale sediului sau personalului ADRIA.",
+    "unde": "src/components/Elements.tsx, src/content/assets.json",
+    "stare": "confirmat",
+    "sursa": "Provenienta si instructiunile originale sunt incluse in src/content/assets.json; doua active WebP distincte.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-fara-tracking",
+    "text": "Aplicatia nu seteaza cookie-uri, localStorage ori sessionStorage si nu incarca servicii de analiza sau publicitate.",
+    "unde": "src/app/cookies/page.tsx",
+    "stare": "confirmat",
+    "sursa": "Inspectia sursei si poarta de browser consimtamant.spec.ts; nu exclude jurnalele tehnice ale infrastructurii.",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  },
+  {
+    "id": "s3-temei-gdpr",
+    "text": "Corespondenta precontractuala si cea profesionala se disting dupa temeiul aplicabil; sunt prezentate drepturile conditionate de GDPR.",
+    "unde": "src/app/confidentialitate/page.tsx",
+    "stare": "confirmat",
+    "sursa": "https://eur-lex.europa.eu/eli/reg/2016/679/oj?locale=ro - art. 6 si 12-22",
+    "confirmat_de": "Verificare editoriala si implementare, 2026-09-19",
+    "data": "2026-09-19"
+  }
+]

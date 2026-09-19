@@ -1,23 +1,30 @@
-# Direcția vizuală 3s4: REF-S
+# Directia alternativei 3s3
 
-Suprafețe albe, text marin, accent violet, grilă fină și compoziție editorială. Antetul are o imagine fotorealistă originală a pregătirii documentelor pentru digitalizare, cu o mișcare discretă care se încheie în cinci secunde. Legenda o identifică drept imagine ilustrativă generată. Pe telefon și tabletă, fotografia apare integral sub text, într-un cadru propriu. Fotografiile ilustrative stau în carduri, cu descrieri explicite. Acțiunile au colțuri de 6 px, cardurile de 12 px. Inter este singura familie; corpul este de 17 px, titlurile au greutatea 400, iar înălțimea de rând este minimum 1,2 pentru diacritice.
+Versiunea actuala urmeaza ADR-0008. Documentele anterioare raman istorice.
 
-Numele semantice moștenite sunt păstrate pentru compatibilitatea paginilor interioare.
+## Compozitie
 
-| Rol | Valoare | Utilizare |
-|---|---|---|
-| `cerneala` | #102b3f | text principal |
-| `cerneala-3` | #526475 | text secundar pe alb sau ceață |
-| `albastru` | #533afd | violetul acțiunii principale |
-| `albastru-2` | #4930dd | legături pe fond deschis |
-| `albastru-clar` | #bcb4ff | legături pe fond închis |
-| `alb` | #ffffff | suprafață principală |
-| `ceata` | #f6f9fc | suprafață secundară |
-| `negru` | #102b3f | suprafața închisă Solve |
-| `accent-nou` | #4930dd | etichete și repere |
+Titluri ample, tipografie Inter, spatiu alb si o suprafata diagonala cu gradient. Demonstratia este parte din deschiderea paginii, cu documentul sursa accesibil. Nu exista cifre de performanta sau sigle de clienti inventate.
 
-Contrastul este calculat din valorile reale în testele direcției. Fiecare pereche folosită pentru text obișnuit trebuie să treacă 4,5:1. Testele browser verifică suplimentar contrastul paginilor randate. Accentul deschis se folosește numai pe suprafețe închise.
+Serviciile folosesc o structura in trei coloane; procesul operational are fundal inchis si fotografie relevanta. Pagina de domenii este un index editorial. Paginile de domeniu au cate un inventar specific, o problema concreta si trei pasi adaptati. Ghidul, costurile, comparatia, contactul si paginile juridice au structuri proprii.
 
-Containerul are maximum 1248 px. La 900 px, grilele principale devin o coloană, iar domeniile două coloane. La 600 px, spațiul lateral devine 20 px și acțiunile antetului se așază vertical. `prefers-reduced-motion` dezactivează animațiile și tranzițiile. Focusul tastaturii rămâne vizibil.
+## Culoare
 
-Motivarea migrării testelor: [ADR-0006](../adr/ADR-0006-directie-ref-s.md). Demonstrația Solve folosește numai exemple ilustrative locale, marcate vizibil.
+Text principal #18253e, text secundar #546378, actiune #5844d8, fundal operational #102b48. Accentul secundar variaza discret in exemplele de domeniu. Culoarea nu este singurul indiciu pentru starea unui control.
+
+## Interactiune si acces
+
+Meniul mobil si sursele documentelor folosesc dialoguri modale cu focalizare limitata la interior, inchidere Escape si revenire la declansator. Linkurile sunt elemente de navigare, butoanele schimba starea. Preferinta pentru miscare redusa dezactiveaza animatia decorativa.
+
+Pe mobil se elimina coloana laterala a demonstratiei, tabelele lungi se adapteaza, iar comparatia ofera selector de varianta. Footerul pastreaza doua coloane de navigare si legaturile juridice.
+
+## Fotografie
+
+public/images/scan.webp: pregatire de documente la un scaner profesional.
+public/images/archive.webp: recuperarea unei cutii din raft, cu carucior de lucru.
+
+Ambele au 1536 x 1024 pixeli si sunt declarate ilustratii generate cu AI. Instructiunile originale sunt pastrate in src/content/assets.json. Nu se folosesc fotografii decorative de mobilier sau portrete fictive prezentate drept echipa.
+
+## Limitele verificarii
+
+Testele automate acopera rute, imagini, tastatura, fluxuri si constrangeri tehnice. Calitatea editoriala si vizuala necesita si citirea tuturor paginilor, plus inspectia capturilor desktop si mobil. Numarul de teste nu este un scor de design.

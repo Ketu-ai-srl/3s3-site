@@ -1,22 +1,9 @@
-import type { Metadata } from "next";
-import JuridicPagina from "@/components/JuridicPagina";
-import { COOKIES } from "@/content/juridic";
+import type {Metadata} from "next";
+import Link from "next/link";
+import {PageIntro} from "@/components/Elements";
+import Icon from "@/components/Icon";
 
-// Pagina despre ce se stocheaza in browser. Scrisa pe starea REALA a site-ului - zero
-// cookie-uri, zero stocare locala, zero servicii ale altcuiva - nu pe un sablon care ar
-// declara un instrument de statistici pe care nu il avem.
-//
-// Afirmatia nu sta pe cuvantul nostru: poarta C-01 scaneaza sursa si HTML-ul construit la
-// fiecare lot, iar `tests/browser/consimtamant.spec.ts` deschide fiecare ruta intr-un
-// browser real si cere multime vida de cookie-uri, de chei de stocare si de gazde straine.
-// Daca cineva adauga vreodata un tert, publicarea se opreste inainte ca pagina asta sa
-// devina falsa.
-export const metadata: Metadata = {
-  title: COOKIES.titluMeta,
-  description: COOKIES.descriereMeta,
-  alternates: { canonical: "/cookies" },
-};
-
-export default function Cookies() {
-  return <JuridicPagina pagina={COOKIES} />;
-}
+export const metadata:Metadata={"title": "Cookie-uri, stocare locală și resursele site-ului", "description": "Site-ul nu folosește cookie-uri de analiză sau publicitate. Aflați unde rămân selecțiile, ce face copierea și cum sunt accesate sursele externe.", "alternates": {"canonical": "/cookies"}};
+export default function Page(){return <main>
+<PageIntro eyebrow="Informații juridice" title="Cookie-uri și stocare în browser" intro="Site-ul funcționează fără instrumente de publicitate sau analiză a vizitatorilor. Actualizare: 19 septembrie 2026."/><article className="container legal-content"><h2>Ce folosește această prezentare</h2><p>Aplicația nu setează cookie-uri și nu utilizează localStorage sau sessionStorage pentru selecțiile din demonstrație, ghid ori contact. Starea interacțiunilor rămâne în memoria paginii și se resetează la reîncărcare.</p><h2>Ce poate păstra browserul</h2><p>Browserul poate păstra istoricul, fișierele descărcate și resursele în cache. Butonul de copiere scrie textul în clipboard numai la activare. Aceste mecanisme nu sunt cookie-uri și depind de setările dispozitivului.</p><h2>Resurse și servicii externe</h2><p>Fonturile, imaginile și documentele demonstrative sunt servite de site. Paginile legislative, ADRIA și autoritatea de protecție a datelor se deschid numai când alegeți legătura lor. Politicile acelor site-uri se aplică după accesare.</p><h2>De ce nu apare un banner de consimțământ</h2><p>Prezentarea nu încarcă tehnologii opționale de urmărire pentru care să solicite o alegere. Dacă vor fi introduse astfel de tehnologii, informațiile și mecanismul de consimțământ vor trebui actualizate înainte de utilizarea lor.</p><h2>O observație despre confidențialitate</h2><p>Absența cookie-urilor nu înseamnă absența tuturor datelor tehnice: servirea paginilor și corespondența prin e-mail sunt descrise separat.</p><Link className="text-link" href="/confidentialitate">Citiți despre date și corespondență<Icon/></Link></article>
+</main>;}

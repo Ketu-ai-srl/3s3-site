@@ -1,24 +1,4 @@
-import type { Metadata } from "next";
-import PaginaDeSegment from "@/components/PaginaDeSegment";
-import { CONSTRUCTII } from "@/content/segmente";
-
-// Al cincilea segment. Fisierul ramane scurt, ca la notari: continutul sta in
-// `segmente.ts`, forma paginii in `PaginaDeSegment`.
-//
-// Canonical auto-referential: fara el, pagina ar mosteni canonical-ul layout-ului si
-// ar arata spre pagina de start, ceea ce scoate ruta asta din index.
-export const metadata: Metadata = {
-  title: CONSTRUCTII.titluMeta,
-  description: CONSTRUCTII.descriereMeta,
-  alternates: { canonical: "/solutii/constructii" },
-};
-
-export default function Constructii() {
-  return (
-    <PaginaDeSegment
-      segment={CONSTRUCTII}
-      nume="Firme de construcții și dezvoltatori"
-      slug="constructii"
-    />
-  );
-}
+import type {Metadata} from "next";
+import SectorPage from "@/components/SectorPage";
+export const metadata:Metadata={"title": "Arhivarea dosarelor pentru construcții", "description": "Arhivarea dosarelor pentru construcții. Descoperiți un exemplu de inventar, condițiile de organizare și pașii unei evaluări 3S.", "alternates": {"canonical": "/solutii/constructii"}};
+export default function Page(){return <SectorPage slug="constructii"/>;}

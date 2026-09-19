@@ -1,19 +1,7 @@
-import type { Metadata } from "next";
-import JuridicPagina from "@/components/JuridicPagina";
-import { CONFIDENTIALITATE } from "@/content/juridic";
+import type {Metadata} from "next";
+import {Action,PageIntro} from "@/components/Elements";
 
-// Politica de confidentialitate. Textul sta in `src/content/juridic.ts`; aici raman doar
-// metadatele si canonical-ul auto-referential, cerut pe fiecare pagina de poarta S-02.
-//
-// Republica Moldova e o SECTIUNE a paginii, nu o ruta separata. Motivul e scris in antetul
-// fisierului de continut si se rezuma la un fapt: 3S nu are sediu sau reprezentant acolo,
-// iar pagini separate ar sugera o prezenta locala pe care nu o avem.
-export const metadata: Metadata = {
-  title: CONFIDENTIALITATE.titluMeta,
-  description: CONFIDENTIALITATE.descriereMeta,
-  alternates: { canonical: "/confidentialitate" },
-};
-
-export default function Confidentialitate() {
-  return <JuridicPagina pagina={CONFIDENTIALITATE} />;
-}
+export const metadata:Metadata={"title": "Confidențialitate și corespondență prin e-mail", "description": "Cum sunt tratate datele de navigare și mesajele pregătite în site. Destinatarul corespondenței este ADRIA; demonstrația folosește date fictive.", "alternates": {"canonical": "/confidentialitate"}};
+export default function Page(){return <main>
+<PageIntro eyebrow="Informații juridice" title="Confidențialitate" intro="Explicăm separat navigarea în site, demonstrația și corespondența pe care alegeți să o trimiteți. Actualizare: 19 septembrie 2026."/><article className="container legal-content"><h2>1. Corespondența cu ADRIA</h2><p>Mesajele pentru evaluarea serviciilor sunt primite de ADRIA SERVICII ARHIVARE SRL, CUI 30901492, prin office@adriaarhivare.ro. ADRIA prelucrează datele din această corespondență pentru a analiza și a răspunde solicitării.</p><h2>2. Ce face instrumentul de contact</h2><p>Subiectul și detaliile introduse rămân în memoria paginii. Textul nu este trimis unui server de formular și nu se creează o înregistrare a cererii în site. La activarea „Deschideți e-mailul”, datele sunt transferate în aplicația dumneavoastră de e-mail. Trimiterea are loc numai din acea aplicație.</p><p>Butonul de copiere scrie textul în clipboard la cerere. Textul poate rămâne în clipboard sau în istoricul gestionat de dispozitiv. Contextul unei cereri poate apărea în adresa paginii de contact și în istoricul browserului; nu introduceți date sensibile în subiect.</p><h2>3. Datele din e-mail</h2><p>Dacă trimiteți mesajul, destinatarul primește adresa expeditorului, numele dacă este furnizat, conținutul și eventualele atașamente. Pentru primul contact sunt suficiente informații generale despre arhivă. Nu trimiteți acte confidențiale înainte de stabilirea condițiilor de prelucrare.</p><h2>4. Scop și temei</h2><p>Solicitările unei persoane privind un posibil contract se analizează pentru demersuri precontractuale, conform art. 6 alin. (1) lit. b) GDPR. Corespondența profesională în numele unei organizații poate fi tratată în interesul legitim de a răspunde cererii, conform lit. f). Obligațiile legale, când sunt aplicabile, au temeiul prevăzut la lit. c).</p><h2>5. Navigare și date tehnice</h2><p>Servirea paginilor implică adresa IP, informații despre browser, adresa solicitată și momentul accesării. Furnizorii tehnici pot prelucra jurnale necesare funcționării, securității și investigării erorilor. Site-ul nu încarcă instrumente de analiză a vizitatorilor sau publicitate.</p><h2>6. Demonstrația</h2><p>Documentele și răspunsurile sunt fictive și incluse în site. Textul introdus în căutare este folosit local pentru a selecta un exemplu. Nu este trimis unui model AI. Nu puteți încărca documente reale în demonstrație.</p><h2>7. Destinatari și păstrare</h2><p>Corespondența poate fi accesată de persoanele care gestionează solicitarea și de furnizorul serviciului de e-mail. Păstrarea depinde de soluționarea cererii, de eventualul contract și de obligațiile legale. Un termen exact sau detaliile furnizorilor pot fi solicitate destinatarului; site-ul nu promite o ștergere automată la un interval fix.</p><h2>8. Drepturile dumneavoastră</h2><p>În condițiile GDPR, puteți solicita acces, rectificare, ștergere, restricționare, portabilitate sau vă puteți opune prelucrării, în funcție de temei. Scrieți la office@adriaarhivare.ro și precizați solicitarea. Puteți depune o plângere la autoritatea de supraveghere.</p><p><a href="https://www.dataprotection.ro/" target="_blank" rel="noreferrer">Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (filă nouă)</a></p><p><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj?locale=ro" target="_blank" rel="noreferrer">Regulamentul (UE) 2016/679, art. 6 și 12-22 (filă nouă)</a></p><Action label="Solicitare privind datele personale" context="Solicitare privind protecția datelor"/></article>
+</main>;}

@@ -1,19 +1,8 @@
-import type { Metadata } from "next";
-import JuridicPagina from "@/components/JuridicPagina";
-import { TERMENI } from "@/content/juridic";
+import type {Metadata} from "next";
+import Link from "next/link";
+import {Action,PageIntro} from "@/components/Elements";
 
-// Termeni si conditii. Fisierul e scurt dinadins: textul sta in `src/content/juridic.ts`,
-// forma paginii in `JuridicPagina`. O corectura de fond se face intr-un singur loc, iar
-// ruta ramane douazeci de randuri pe care nu are nimeni motiv sa le atinga.
-//
-// Canonical auto-referential: fara el, pagina ar mosteni canonical-ul din layout si ar
-// arata spre pagina de start, ceea ce o scoate din index.
-export const metadata: Metadata = {
-  title: TERMENI.titluMeta,
-  description: TERMENI.descriereMeta,
-  alternates: { canonical: "/termeni" },
-};
-
-export default function Termeni() {
-  return <JuridicPagina pagina={TERMENI} />;
-}
+export const metadata:Metadata={"title": "Termeni de utilizare a prezentării 3S", "description": "Condițiile utilizării site-ului 3S, rolul ADRIA, caracterul demonstrativ al exemplelor și diferența dintre prezentare și oferta contractuală.", "alternates": {"canonical": "/termeni"}};
+export default function Page(){return <main>
+<PageIntro eyebrow="Informații juridice" title="Termeni de utilizare" intro="Această pagină descrie utilizarea prezentării 3S și limitele exemplelor disponibile. Actualizare: 19 septembrie 2026."/><article className="container legal-content"><h2>1. Ce prezintă site-ul</h2><p>3S / Scan Store Solve este un proiect de prezentare a serviciilor de arhivare, digitalizare și căutare în documente. Site-ul nu încheie contracte, nu încasează plăți și nu oferă acces la documentele clienților.</p><h2>2. Identitatea și contactul</h2><p>Serviciile de arhivare fizică și digitalizare sunt prezentate prin ADRIA SERVICII ARHIVARE SRL, CUI 30901492, J03/1580/2012. Punctul de lucru publicat de ADRIA este Str. Gării nr. 29 bis, Hala C1, Golești, Argeș. Corespondența se trimite la office@adriaarhivare.ro.</p><p>3S este o marcă de lucru, nu denumirea unei noi societăți identificate prin datele ADRIA. Entitatea contractantă și serviciile asumate se precizează în oferta scrisă și în contract.</p><h2>3. Contactul prin e-mail</h2><p>Instrumentul de contact pregătește un mesaj în pagină. Deschiderea legăturii de e-mail transferă textul în aplicația aleasă de dumneavoastră. Site-ul nu trimite mesajul și nu confirmă livrarea lui. Nu există o rezervare automată a unei întâlniri.</p><h2>4. Exemple și imagini</h2><p>Documentele din demonstrație sunt fictive și nu au valoare fiscală sau juridică. Răspunsurile sunt predefinite. Fotografiile ilustrative sunt generate cu AI și nu prezintă sediul, personalul sau documentele reale ADRIA.</p><h2>5. Informații despre păstrare</h2><p>Ghidul trimite la surse legislative și precizează data verificării. Înainte de o decizie privind documente reale trebuie verificată categoria, legislația specială, situația organizației și procedura aplicabilă. Calculatorul nu autorizează eliminarea documentelor.</p><h2>6. Oferta și condițiile serviciilor</h2><p>Conținutul prezentării nu înlocuiește oferta, contractul sau acordul de prelucrare a datelor. Termenele de execuție, costurile, accesul, exportul și furnizorii digitali se stabilesc pentru fiecare proiect.</p><h2>7. Legături externe și sesizări</h2><p>Sursele oficiale și pagina ADRIA sunt accesate doar dacă activați legăturile respective. Pentru o eroare în conținut sau o problemă tehnică, descrieți pagina și situația în mesajul de contact.</p><Action label="Trimiteți o sesizare" context="Sesizare privind prezentarea 3S"/><p className="legal-crosslinks"><Link href="/confidentialitate">Confidențialitate</Link><Link href="/cookies">Cookie-uri și stocare</Link></p></article>
+</main>;}

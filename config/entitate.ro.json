@@ -3,8 +3,9 @@
   "_poarta": "poarta-juridic.py trateaza fiecare loc gol ca AVERT pe staging si ca OPRIRE la productie. Asta e comportamentul dorit: site-ul poate fi aratat pe mediul de proba, dar nu poate fi publicat cu identitatea comerciantului incompleta.",
   "denumire": "de completat",
   "sediu": "de completat",
-  "email": "contact@3s.ro",
+  "email": "office@adriaarhivare.ro",
   "telefon": "de completat",
   "numar_orc": "de completat",
-  "cod_fiscal": "de completat"
+  "cod_fiscal": "de completat",
+  "_nota_contact": "Adresa publica ADRIA primeste solicitarile pentru proiectul 3S; nu atribuie datele ADRIA unei societati noi."
 }

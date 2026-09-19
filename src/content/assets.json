@@ -1,0 +1,20 @@
+{
+  "images": [
+    {
+      "path": "/images/scan.webp",
+      "width": 1536,
+      "height": 1024,
+      "kind": "AI-generated illustration",
+      "tool": "Built-in image generation",
+      "prompt": "Use case: photorealistic-natural. Asset: editorial website photograph for a Romanian document digitization service, landscape 3:2. A real working document preparation and scanning station in a modest professional records office. Close three-quarter overhead view: the bare clean hands of one archivist carefully lifting a single A4 paper onto a robust planetary overhead scanner with a flat book cradle; a neat stack of aged cream documents, clearly practical archive folders and two archival boxes farther back. The scanner, paper and human gesture are the subject and all remain fully visible. Natural daylight, restrained cool gray and ivory materials with a subtle blue folder, rich tactile paper details, believable lived-in workflow, contemporary high-end documentary photography, 50mm lens. Text on documents indistinct and unreadable. No faces, no personal identifying data, no invented readable labels, no logos, no flowers, no marble styling, no luxury decor, no glass futuristic UI, no protective gloves for ordinary paper, no extra or deformed fingers. This is a clearly illustrative scene, not a photo of any real named company."
+    },
+    {
+      "path": "/images/archive.webp",
+      "width": 1536,
+      "height": 1024,
+      "kind": "AI-generated illustration",
+      "tool": "Built-in image generation",
+      "prompt": "Use case: photorealistic-natural. Asset: wide 3:2 editorial website photograph illustrating physical records retrieval. A believable professional archival storage aisle with powder-coated gray steel racks loaded with sturdy beige archival document boxes with small neutral white inventory labels. Medium close perspective focused on a single archivist's forearms and hands carefully sliding one box onto a waist-height records trolley; torso in slate blue work shirt only, no face. Box lids fit correctly, records protected in closed upright boxes, clean concrete floor, softly receding racks. Authentic functional workplace, calm natural industrial lighting, precise material texture, premium documentary photography, subtle warm paper against cool steel, 50mm lens, deep enough focus to understand retrieval. No warehouse pallets, no gift boxes, no decor, no leather books, no readable personal data, no logos, no exaggerated endless sci-fi shelves, no deformed hands. Entire trolley and retrieval gesture readable. This is an illustrative scene, not evidence of a named company's actual facility."
+    }
+  ]
+}

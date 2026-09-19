@@ -1,23 +1,33 @@
-# 3s4 - Scan Store Solve
+# 3s3 / Scan Store Solve
 
-Site public de vanzare pentru **3S - Scan Store Solve**: arhivare fizica autorizata, digitalizare si cautare AI in documente.
+Alternativa de prezentare pentru proiectul 3S, cu 22 de pagini, servicii de arhivare atribuite ADRIA si exemple digitale fictive.
 
-- Mediu de proba: `https://3s4.ke2.in` (public, `noindex`; `3s3.ke2.in` ramane disponibil)
-- Productie: nu exista inca
-- Stiva: Next.js 15, Tailwind v4, React 19, pnpm
-- Livrare: Docker pe Coolify (server `s3.ke2.in`)
+- Prezentare: https://3s3.ke2.in, neindexabila.
+- Depozit: Ketu-ai-srl/3s3-site.
+- Next.js 15, React 19, TypeScript, Tailwind 4, pnpm.
+- Livrare: Dockerfile pe Coolify; port 3000; SITE_ENV=staging.
 
-## Comenzi
+## Interactiuni
 
-| Comanda | Ce face |
+Demonstratia ofera trei documente locale, sursa evidentiata, navigare pe pagini, PDF descarcabil si cautare fara rezultat. Nu contacteaza un model AI.
+
+Contactul pregateste un e-mail contextual catre adresa publica ADRIA si permite copierea mesajului. Trimiterea are loc din aplicatia de e-mail a vizitatorului.
+
+Ghidul de pastrare filtreaza categorii si calculeaza regula contabila de 5 ani de la 1 iulie. Comparația mobila si selectia serviciilor completeaza fluxul de evaluare.
+
+## Verificare si rulare
+
+| Comanda | Scop |
 |---|---|
-| `pnpm dev` | pornire locala |
-| `pnpm verifica` | poarta locala completa: lint, tipuri, tipografie, build, teste |
-| `pnpm porti` | portile sursei, build si verificarea SEO/juridic |
+| pnpm dev | Server local de dezvoltare |
+| pnpm verifica | Lint, tipuri, probele portilor, sursa, build, SEO, juridic, unitare si browser |
+| pnpm build | Constructie pentru publicare |
+| pnpm start | Servire locala a constructiei |
 
-Directia REF-S foloseste opt imagini originale generate pentru acest site, o demonstratie ilustrativa interactiva si 22 de pagini. Fotografiile nu reprezinta depozitul sau echipa clientului. Detalii: `docs/design/DIRECTIA.md` si `docs/adr/ADR-0006-directie-ref-s.md`.
+Marcajul /stamp vine din src/content/_stamp.json. Publicarea se confirma prin compararea marcajului servit cu cel din commit.
 
-## Marcajul de livrare
+Decizia de reconstructie si migrarea probelor: docs/adr/ADR-0008-alternativa-3s3.md. Registrele istorice sunt retrase explicit. Registrul activ: src/content/afirmatii/alternativa-3s3.json.
 
-`/stamp` intoarce valoarea din `src/content/_stamp.json` a commit-ului construit. Se foloseste ca sa
-dovedim ca un deploy a schimbat efectiv continutul livrat, nu doar ca serviciul raspunde 200.
+## Imagini
+
+Doua fotografii ilustrative originale, generate prin instrumentul integrat, sunt servite local ca WebP. Nu prezinta sediul sau personalul ADRIA. Caile, dimensiunile si instructiunile exacte de generare sunt in src/content/assets.json.

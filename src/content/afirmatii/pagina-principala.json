@@ -2,82 +2,100 @@
   {
     "id": "adria-din-2019",
     "text": "ADRIA, firma-mama, arhiveaza documente din 2019, la Golesti, judetul Arges",
-    "unde": "src/components/Subsol.tsx",
-    "stare": "neconfirmat",
+    "unde": "docs/adr/ADR-0008-alternativa-3s3.md",
+    "stare": "retras",
     "sursa": "",
     "confirmat_de": "",
-    "data": ""
+    "data": "",
+    "unde_istoric": "src/components/Subsol.tsx",
+    "motiv_retragere": "Prezentarea veche a fost inlocuita integral. Afirmatiile actuale sunt in registrul alternativa-3s3."
   },
   {
     "id": "depozit-vizitabil",
     "text": "Depozitul este la Golesti, langa Pitesti, si poate fi vizitat inainte de semnare",
-    "unde": "src/app/page.tsx",
-    "stare": "neconfirmat",
+    "unde": "docs/adr/ADR-0008-alternativa-3s3.md",
+    "stare": "retras",
     "sursa": "",
     "confirmat_de": "",
-    "data": ""
+    "data": "",
+    "unde_istoric": "src/app/page.tsx",
+    "motiv_retragere": "Prezentarea veche a fost inlocuita integral. Afirmatiile actuale sunt in registrul alternativa-3s3."
   },
   {
     "id": "proces-preluare",
     "text": "Preluarea se face cu proces-verbal de predare-primire, cu masurarea metrilor liniari si sigilarea cutiilor",
-    "unde": "src/app/page.tsx",
-    "stare": "neconfirmat",
+    "unde": "docs/adr/ADR-0008-alternativa-3s3.md",
+    "stare": "retras",
     "sursa": "",
     "confirmat_de": "",
-    "data": ""
+    "data": "",
+    "unde_istoric": "src/app/page.tsx",
+    "motiv_retragere": "Prezentarea veche a fost inlocuita integral. Afirmatiile actuale sunt in registrul alternativa-3s3."
   },
   {
     "id": "nomenclator",
     "text": "Intocmim nomenclatorul arhivistic si il pregatim pentru avizare la Arhivele Nationale",
-    "unde": "src/app/page.tsx",
-    "stare": "neconfirmat",
+    "unde": "docs/adr/ADR-0008-alternativa-3s3.md",
+    "stare": "retras",
     "sursa": "",
     "confirmat_de": "",
-    "data": ""
+    "data": "",
+    "unde_istoric": "src/app/page.tsx",
+    "motiv_retragere": "Prezentarea veche a fost inlocuita integral. Afirmatiile actuale sunt in registrul alternativa-3s3."
   },
   {
     "id": "retur-original",
     "text": "Aducem originalul pe hartie atunci cand este cerut",
-    "unde": "src/app/page.tsx",
-    "stare": "neconfirmat",
+    "unde": "docs/adr/ADR-0008-alternativa-3s3.md",
+    "stare": "retras",
     "sursa": "",
     "confirmat_de": "",
-    "data": ""
+    "data": "",
+    "unde_istoric": "src/app/page.tsx",
+    "motiv_retragere": "Prezentarea veche a fost inlocuita integral. Afirmatiile actuale sunt in registrul alternativa-3s3."
   },
   {
     "id": "termene-legale",
     "text": "Cele opt termene de pastrare din verificator, cu articolele de lege citate",
-    "unde": "src/content/termene.ts",
-    "stare": "neconfirmat",
+    "unde": "docs/adr/ADR-0008-alternativa-3s3.md",
+    "stare": "retras",
     "sursa": "",
     "confirmat_de": "",
-    "data": ""
+    "data": "",
+    "unde_istoric": "src/content/termene.ts",
+    "motiv_retragere": "Prezentarea veche a fost inlocuita integral. Afirmatiile actuale sunt in registrul alternativa-3s3."
   },
   {
     "id": "contract-romanesc",
     "text": "Contract in limba romana, sub lege romana, cu instantele din Romania",
-    "unde": "src/app/page.tsx",
-    "stare": "neconfirmat",
+    "unde": "docs/adr/ADR-0008-alternativa-3s3.md",
+    "stare": "retras",
     "sursa": "",
     "confirmat_de": "",
-    "data": ""
+    "data": "",
+    "unde_istoric": "src/app/page.tsx",
+    "motiv_retragere": "Prezentarea veche a fost inlocuita integral. Afirmatiile actuale sunt in registrul alternativa-3s3."
   },
   {
     "id": "fara-iso",
     "text": "Nu detinem certificare ISO 27001",
-    "unde": "src/app/page.tsx",
-    "stare": "confirmat",
+    "unde": "docs/adr/ADR-0008-alternativa-3s3.md",
+    "stare": "retras",
     "sursa": "nu exista certificat emis; afirmatie negativa, verificabila prin absenta",
     "confirmat_de": "Ketu, 2026-09-05",
-    "data": "2026-09-05"
+    "data": "2026-09-05",
+    "unde_istoric": "src/app/page.tsx",
+    "motiv_retragere": "Prezentarea veche a fost inlocuita integral. Afirmatiile actuale sunt in registrul alternativa-3s3."
   },
   {
     "id": "adresa-contact",
     "text": "Adresa contact@3s.ro este a noastra si cutia postala exista",
-    "unde": "src/app/page.tsx, src/components/Subsol.tsx, config/entitate.ro.json",
-    "stare": "neconfirmat",
+    "unde": "docs/adr/ADR-0008-alternativa-3s3.md",
+    "stare": "retras",
     "sursa": "",
     "confirmat_de": "",
-    "data": ""
+    "data": "",
+    "unde_istoric": "src/app/page.tsx, src/components/Subsol.tsx, config/entitate.ro.json",
+    "motiv_retragere": "Prezentarea veche a fost inlocuita integral. Afirmatiile actuale sunt in registrul alternativa-3s3."
   }
 ]
