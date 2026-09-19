@@ -1,10 +1,10 @@
 {
   "fisiere": 14,
-  "teste": 67,
-  "asertiuni": 190,
+  "teste": 68,
+  "asertiuni": 191,
   "sarite_maxim": 0,
   "masurat_la": "2026-09-19",
-  "masurat_pe": "3s3 lot/s3-rebuild; migratie explicita la alternativa noua, cifre din contorul nemodificat.",
+  "masurat_pe": "3s3 lot/s3-rebuild; migratie explicita plus proba tuturor rutelor la 320 px.",
   "de_ce": "Coborare DECLARATA a cazurilor si asertiunilor: cele sase suite pentru componentele vechi sunt inlocuite de sase suite semantice pentru calcul, sursa documentului, contact, structura, continut si active. Meniul si interactiunile sunt testate in browser. Cele cinci porti generice si proba marcajului raman. Nicio proba sarita; detectorii nu sunt modificati. Motiv: docs/adr/ADR-0008-alternativa-3s3.md.",
   "cum_se_coboara": "In acelasi commit cu inlocuirea probelor, motivat explicit."
 }

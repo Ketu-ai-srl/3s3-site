@@ -19,3 +19,5 @@
 .header-contact{min-height:44px}.demo-compact .app-section-title{font-size:11px}.demo-compact .answer-text{font-size:16px}.demo-compact .source-card strong{font-size:12px}.demo-compact .source-card small,.demo-compact .demo-disclosure{font-size:10px}.demo-compact .demo-options button{font-size:10px;min-height:35px}.footer-grid>div:not(:first-child)>a:not(.text-link){font-size:12px}.footer-bottom,.footer-bottom a{font-size:10px}.footer-brand>small{font-size:10px}.photo figcaption{font-size:10px}
 
 .security-flow>div>svg{display:block;margin-inline:auto}.security-flow>div{align-self:start}.security-flow h2{min-height:2.3em;display:flex;align-items:center;justify-content:center}
+
+@media(max-width:359px){.document-card:before{inset:-23px -12px}}

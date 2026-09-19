@@ -1,3 +1,4 @@
+import {rutePublice} from './ajutor/proiect';
 import {expect,test,type Page} from '@playwright/test';
 async function outsideViewport(page:Page){return page.locator('header.site-header').evaluate(header=>[...header.querySelectorAll('a,button')].filter(el=>!!(el as HTMLElement).offsetParent).filter(el=>{const r=el.getBoundingClientRect();return r.left<0||r.right>innerWidth}).map(el=>el.textContent))}
 test('antetul si titlul sunt utilizabile la cinci latimi',async({page})=>{for(const width of [320,390,768,1024,1440]){await page.setViewportSize({width,height:900});await page.goto('/');expect(await outsideViewport(page)).toEqual([]);await expect(page.locator('h1')).toBeVisible()}});
@@ -20,3 +21,5 @@ test('preferinta pentru miscare redusa opreste animatia decorativa',async({page}
 test('o adresa inexistenta raspunde 404 si ofera recuperare',async({page})=>{const response=await page.goto('/pagina-care-nu-exista');expect(response?.status()).toBe(404);await expect(page.locator('h1')).toHaveText('Pagina nu a fost găsită.');await page.getByRole('link',{name:'Înapoi la început'}).click();await expect(page).toHaveURL(/\/$/)});
 test('martor POZITIV: detecteaza actiunea din afara ferestrei',async({page})=>{await page.setViewportSize({width:390,height:844});await page.setContent('<header class="site-header"><a href="/" style="position:absolute;left:500px">Depaseste</a></header>');expect(await outsideViewport(page)).toEqual(['Depaseste'])});
 test('martor NEGATIV: ignora actiunile ascunse',async({page})=>{await page.setContent('<header class="site-header"><a href="/">Corect</a><a style="display:none;position:absolute;left:500px">Ascuns</a></header>');expect(await outsideViewport(page)).toEqual([])});
+
+test('toate paginile incap la 320 px inclusiv fundalul decorativ al documentului',async({page})=>{test.setTimeout(60000);await page.setViewportSize({width:320,height:900});const bad:string[]=[];for(const route of rutePublice()){await page.goto(route,{waitUntil:'networkidle'});if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))bad.push(route)}expect(bad).toEqual([])});
