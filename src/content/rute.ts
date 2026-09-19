@@ -17,7 +17,7 @@
 // `tests/browser/legaturi-imagini.spec.ts` o prinde si opreste lotul, pe drept.
 
 /** Adresa publica a site-ului. Din ea se compun canonical-urile, harta de site si robots. */
-export const ADRESA_BAZA = "https://3s3.ke2.in";
+export const ADRESA_BAZA = "https://3s4.ke2.in";
 
 export type Ruta = {
   /** Calea absoluta, exact cum apare in bara de adrese. Fara bara la final, in afara de "/". */

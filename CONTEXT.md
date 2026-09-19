@@ -9,7 +9,7 @@ imbatranesc - alea traiesc in fisierul catre care trimite.
 | **3S** | Marca "Scan Store Solve": arhivare fizica autorizata, digitalizare si cautare AI in documente. Firma din spate e in curs de infiintare. | `docs/adr/ADR-0001-stiva-si-medii.md` |
 | **ADRIA** | ADRIA SERVICII ARHIVARE SRL, Pitesti - firma-mama, operator de arhivare. Orice afirmatie de vechime sau autorizare vine de la ea si se scrie ATRIBUIT. | `.claude/rules/afirmatii-atribuite.md` |
 | **SerenityFlow** | Platforma care exista deja si face munca. Site-ul nu o contine: doar vinde si trimite spre ea. | - |
-| **staging** | `3s3.ke2.in` - mediul de proba: public si marcat `noindex`. Pe el, portile de prezenta avertizeaza in loc sa opreasca. | `src/middleware.ts` |
+| **staging** | `3s4.ke2.in` - mediul de proba: public si marcat `noindex`. Pe el, portile de prezenta avertizeaza in loc sa opreasca. | `src/middleware.ts` |
 | **productie** | Mediul pe care portile de prezenta OPRESC in loc sa avertizeze. Se creeaza cand owner-ul comunica domeniul real. | `docs/adr/ADR-0001-stiva-si-medii.md` |
 | **marcaj de livrare** | Valoarea servita la `/stamp`, produsa din marcajul comis in arbore. Dovedeste ca deploy-ul a schimbat CONTINUTUL livrat, nu doar ca serviciul raspunde. | `src/app/stamp/route.ts` |
 | **poarta** | O comanda care opreste munca printr-un cod de iesire: `0` curat, `1` probleme, `2` folosire gresita, `3` NEMASURAT. Trei nu e curat. Nu e o intentie, e un cod. | `package.json`, scriptul `verifica` |

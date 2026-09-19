@@ -10,7 +10,7 @@
 
 set -u
 
-ADRESA="${ADRESA_STAGING:-https://3s3.ke2.in}"
+ADRESA="${ADRESA_STAGING:-https://3s4.ke2.in}"
 UTILIZATOR="${BASIC_AUTH_USER:-}"
 PAROLA="${BASIC_AUTH_PASS:-}"
 RADACINA="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"

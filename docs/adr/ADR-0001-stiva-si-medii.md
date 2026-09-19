@@ -12,7 +12,7 @@ Construim site-ul public de vanzare al brandului 3S. Platforma de produs exista 
 - **Stiva:** Next.js 15 (App Router) + Tailwind v4, continut MDX versionat, pnpm 10.33.0, Node 24.
 - **Livrare:** imagine Docker construita de Coolify, server `s3.ke2.in`. Panoul `c1.ke2.in` NU e
   tinta de deploy.
-- **Medii:** `3s3.ke2.in` = staging, PUBLIC (decizie owner 5 sep 2026: site de prezentare, se arata partenerilor fara frecare), dar cu `X-Robots-Tag: noindex` pana la lansare. Dupa lansarea pe domeniul real, staging-ul redirectioneaza spre productie.
+- **Medii:** `3s4.ke2.in` = staging, PUBLIC (decizie owner 5 sep 2026: site de prezentare, se arata partenerilor fara frecare), dar cu `X-Robots-Tag: noindex` pana la lansare. Dupa lansarea pe domeniul real, staging-ul redirectioneaza spre productie.
   **Productia nu exista** si nu se creeaza pana cand owner-ul comunica domeniul real.
 - **Repo:** `Ketu-ai-srl/3s4-site`, PUBLIC (al treilea site, pornit din arborele lui `3s1-site@main` (4d6dad0) pe 2026-09-06; depozit propriu, fara fork si fara istoricul primului) (reconfirmat de owner 2026-09-06, dupa o zi in care a
   fost privat pentru cateva ore). Consecinte: minutele de Actions sunt gratuite si nelimitate,

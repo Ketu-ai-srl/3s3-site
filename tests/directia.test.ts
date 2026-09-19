@@ -87,7 +87,7 @@ describe('antetul paginilor, randat din componenta reala', () => {
     expect(html).toContain('aria-current="page">Documente')
     const json = JSON.parse(html.match(/<script[^>]+>(.*?)<\/script>/)![1])
     expect(json['@type']).toBe('BreadcrumbList')
-    expect(json.itemListElement.map((item: {item: string}) => item.item)).toEqual(['https://3s3.ke2.in/', 'https://3s3.ke2.in/documente'])
+    expect(json.itemListElement.map((item: {item: string}) => item.item)).toEqual(['https://3s4.ke2.in/', 'https://3s4.ke2.in/documente'])
     expect(json.itemListElement.map((item: {position: number}) => item.position)).toEqual([1,2])
   })
   it('o pagina informativa nu inventeaza o actiune', () => {
