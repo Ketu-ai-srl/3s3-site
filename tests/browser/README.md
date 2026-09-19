@@ -13,6 +13,10 @@ imbatraneste in tacere, iar cine o citeste crede ca a numarat cineva. Lista adev
 
 ## Comenzi
 
+Suita completa ruleaza in Chromium. Cele doua scenarii de focalizare din meniul mobil
+si dialogul documentului ruleaza suplimentar in WebKit, pentru ordinea Tab specifica
+motorului. Instalare: `pnpm exec playwright install --with-deps chromium webkit`.
+
 | Comanda | Ce ruleaza |
 |---|---|
 | `node .claude/scripts/porti/browser-toate.mjs` | **tot directorul** `tests/browser`, cu un build, un server, o rulare |

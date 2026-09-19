@@ -1,10 +1,11 @@
 import type {KeyboardEvent} from "react";
-/** Keep Tab inside the modal, including when the browser would focus its toolbar. */
+/** Use the same Tab order when a browser's native order skips links or buttons. */
 export function keepDialogFocus(event:KeyboardEvent<HTMLDialogElement>){
  if(event.key!=="Tab")return;
- const items=Array.from(event.currentTarget.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex="0"]')).filter(el=>el.getClientRects().length>0);
- const first=items[0],last=items.at(-1);
- if(!first){event.preventDefault();return;}
- if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
- else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+ const items=Array.from(event.currentTarget.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex="0"]')).filter(el=>el.tabIndex>=0&&el.getClientRects().length>0);
+ event.preventDefault();
+ if(!items.length){event.currentTarget.focus();return;}
+ const current=items.indexOf(document.activeElement as HTMLElement);
+ const next=event.shiftKey?(current<=0?items.length-1:current-1):(current+1)%items.length;
+ items[next].focus();
 }

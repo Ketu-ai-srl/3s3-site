@@ -28,6 +28,15 @@ export default defineConfig({
   workers: 1,
   forbidOnly: true,
   retries: 0,
+  projects: [
+    { name: 'chromium', use: { browserName: 'chromium' } },
+    {
+      name: 'webkit-dialoguri',
+      testMatch: ['alternativa.spec.ts', 'meniu.spec.ts'],
+      grep: /contractul se deschide|meniul modal retine/,
+      use: { browserName: 'webkit' },
+    },
+  ],
   // Portile de browser sunt lente prin natura lor, dar un timeout generos ascunde o
   // regresie de performanta in loc s-o arate. 60 s e plafon, nu buget.
   timeout: 60_000,

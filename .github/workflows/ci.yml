@@ -42,8 +42,8 @@ jobs:
       # Probele de browser fac parte din `pnpm verifica`, deci si din poarta locala:
       # poarta.sh isi citeste pasii din acelasi script. Fara pasul asta, CI a picat
       # 17 din 17 cu "Executable doesn't exist" - masurat pe rularea 33965447045.
-      # Se instaleaza doar chromium: probele ruleaza pe un singur motor.
-      - run: pnpm exec playwright install --with-deps chromium
+      # WebKit verifica suplimentar focalizarea in cele doua dialoguri.
+      - run: pnpm exec playwright install --with-deps chromium webkit
       - run: pnpm verifica
       - name: Declanseaza deploy staging
         if: github.ref == 'refs/heads/main' && success()
