@@ -2,7 +2,7 @@
 
 Site public de vanzare pentru **3S - Scan Store Solve**: arhivare fizica autorizata, digitalizare si cautare AI in documente.
 
-- Mediu de proba: `https://3s4.ke2.in` (public, `noindex`)
+- Mediu de proba: `https://3s3.ke2.in` (public, `noindex`)
 - Productie: nu exista inca
 - Stiva: Next.js 15, Tailwind v4, React 19, pnpm
 - Livrare: Docker pe Coolify (server `s3.ke2.in`)

@@ -18,7 +18,7 @@ const ORGANIZATIE = {
   name: "3S - Scan Store Solve",
   description:
     "Arhivare fizică, digitalizare și căutare în documente, pentru instituții publice, notari, cabinete de avocatură și firme din România.",
-  url: "https://3s4.ke2.in",
+  url: "https://3s3.ke2.in",
   areaServed: { "@type": "Country", name: "România" },
   knowsLanguage: ["ro"],
   parentOrganization: {
