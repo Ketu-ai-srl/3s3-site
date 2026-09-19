@@ -1,7 +1,7 @@
 {
   "images": [
     {
-      "path": "/images/scan.webp",
+      "path": "/img/scan.webp",
       "width": 1536,
       "height": 1024,
       "kind": "AI-generated illustration",
@@ -9,7 +9,7 @@
       "prompt": "Use case: photorealistic-natural. Asset: editorial website photograph for a Romanian document digitization service, landscape 3:2. A real working document preparation and scanning station in a modest professional records office. Close three-quarter overhead view: the bare clean hands of one archivist carefully lifting a single A4 paper onto a robust planetary overhead scanner with a flat book cradle; a neat stack of aged cream documents, clearly practical archive folders and two archival boxes farther back. The scanner, paper and human gesture are the subject and all remain fully visible. Natural daylight, restrained cool gray and ivory materials with a subtle blue folder, rich tactile paper details, believable lived-in workflow, contemporary high-end documentary photography, 50mm lens. Text on documents indistinct and unreadable. No faces, no personal identifying data, no invented readable labels, no logos, no flowers, no marble styling, no luxury decor, no glass futuristic UI, no protective gloves for ordinary paper, no extra or deformed fingers. This is a clearly illustrative scene, not a photo of any real named company."
     },
     {
-      "path": "/images/archive.webp",
+      "path": "/img/archive.webp",
       "width": 1536,
       "height": 1024,
       "kind": "AI-generated illustration",

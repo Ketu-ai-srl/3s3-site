@@ -20,8 +20,8 @@ Pe mobil se elimina coloana laterala a demonstratiei, tabelele lungi se adapteaz
 
 ## Fotografie
 
-public/images/scan.webp: pregatire de documente la un scaner profesional.
-public/images/archive.webp: recuperarea unei cutii din raft, cu carucior de lucru.
+public/img/scan.webp: pregatire de documente la un scaner profesional.
+public/img/archive.webp: recuperarea unei cutii din raft, cu carucior de lucru.
 
 Ambele au 1536 x 1024 pixeli si sunt declarate ilustratii generate cu AI. Instructiunile originale sunt pastrate in src/content/assets.json. Nu se folosesc fotografii decorative de mobilier sau portrete fictive prezentate drept echipa.
 
