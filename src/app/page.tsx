@@ -16,9 +16,6 @@ export default function Acasa() {
   const domenii = RUTE.filter(r=>r.cale.startsWith("/solutii/"));
   return <main id="continut">
     <section className="s4-hero">
-      {/* Variantele WebP sunt generate local; srcSet pastreaza decorul fara procesare externa. */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="s4-hero-art" src="/art/flux-1536.webp" srcSet="/art/flux-768.webp 768w, /art/flux-1536.webp 1536w" sizes="(max-width:600px) 100vw, 90vw" alt="" aria-hidden="true" width="1536" height="1024" fetchPriority="high"/>
       <div className="s4-shell">
         <div className="s4-hero-inner"><div className="s4-hero-copy">
           <span className="s4-label">{HOME.eticheta}</span>
@@ -26,6 +23,12 @@ export default function Acasa() {
           <p className="s4-hero-lead">{HOME.lead}</p>
           <div className="s4-actions"><Buton href="/contact" sageata>{HOME.actiune}</Buton><Buton href="/cum-functioneaza" fel="text" sageata>{HOME.secundar}</Buton></div>
         </div></div>
+        <figure className="s4-hero-visual">
+          {/* Variantele WebP sunt locale; imaginea ilustrativa este identificata prin legenda. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="s4-hero-art" src="/art/digitalizare-1536.webp" srcSet="/art/digitalizare-768.webp 768w, /art/digitalizare-1536.webp 1536w" sizes="(max-width:900px) calc(100vw - 40px), 90vw" alt="" aria-hidden="true" width="1536" height="1024" fetchPriority="high"/>
+          <figcaption className="s4-hero-caption">Imagine ilustrativă generată.</figcaption>
+        </figure>
         <div className="s4-trust">{HOME.repere.map(t=><span key={t}><i aria-hidden="true"/>{t}</span>)}</div>
       </div>
     </section>

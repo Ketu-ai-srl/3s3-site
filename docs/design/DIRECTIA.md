@@ -1,6 +1,6 @@
 # Direcția vizuală 3s4: REF-S
 
-Suprafețe albe, text marin, accent violet, grilă fină și compoziție editorială. Antetul are o ilustrație abstractă originală, cu o mișcare discretă care se încheie în cinci secunde. Fotografiile ilustrative stau în carduri, cu descrieri explicite. Acțiunile au colțuri de 6 px, cardurile de 12 px. Inter este singura familie; corpul este de 17 px, titlurile au greutatea 400, iar înălțimea de rând este minimum 1,2 pentru diacritice.
+Suprafețe albe, text marin, accent violet, grilă fină și compoziție editorială. Antetul are o imagine fotorealistă originală a pregătirii documentelor pentru digitalizare, cu o mișcare discretă care se încheie în cinci secunde. Legenda o identifică drept imagine ilustrativă generată. Pe telefon și tabletă, fotografia apare integral sub text, într-un cadru propriu. Fotografiile ilustrative stau în carduri, cu descrieri explicite. Acțiunile au colțuri de 6 px, cardurile de 12 px. Inter este singura familie; corpul este de 17 px, titlurile au greutatea 400, iar înălțimea de rând este minimum 1,2 pentru diacritice.
 
 Numele semantice moștenite sunt păstrate pentru compatibilitatea paginilor interioare.
 
